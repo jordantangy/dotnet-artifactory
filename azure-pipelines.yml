@@ -27,4 +27,4 @@ steps:
     command: |
       jf rt ping
       jf dotnet-config --repo-resolve=jordanta-nuget-remote
-      jf dotnet restore --packages '/Users/jordanta/Desktop/Tests/dotnet-artifactory/src/Test'
+      jf dotnet restore '/Users/jordanta/Desktop/Tests/dotnet-artifactory/src/Test'
