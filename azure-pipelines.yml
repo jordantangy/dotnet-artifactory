@@ -18,7 +18,12 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+- task: JFrogToolsInstaller@1
+  inputs:
+    artifactoryConnection: 'jordanta-rt'
+    cliInstallationRepo: 'jordanta-npm-remote'
+
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
-    command: 'jf dotnet restore src/Test/Test.csproj'
+    command: 'jf rt ping'
