@@ -19,8 +19,8 @@ steps:
   displayName: 'Run a multi-line script'
 
 
-
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
-    command: './Users/jordanta/myagent/_work/_tool/jf rt'
+    command: 'jf rt ping'
+    workingDirectory: './Users/jordanta/myagent/_work/_tool/'
