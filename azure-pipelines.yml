@@ -23,4 +23,4 @@ steps:
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
-    command: 'jf rt ping'
+    command: './Users/jordanta/myagent/_work/_tool/jf rt'
