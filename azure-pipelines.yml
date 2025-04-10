@@ -22,6 +22,8 @@ steps:
   inputs:
     artifactoryConnection: 'jordanta-rt'
     cliInstallationRepo: 'jordanta-npm-remote'
+    installCustomVersion: true
+    cliVersion: '2.74.0'
 
 - task: JfrogCliV2@1
   inputs:
