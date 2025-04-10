@@ -18,14 +18,19 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
-- task: JfrogCliV2@1
+- task: JFrogToolsInstaller@1
   inputs:
-    jfrogPlatformConnection: 'Jfrog Platform connexion'
-    command: 'jf dotnet-config --repo-resolve=jordanta-nuget-remote'
+    artifactoryConnection: 'jordanta-rt'
+    cliInstallationRepo: 'jordanta-npm-remote'
+    installCustomVersion: true
+    cliVersion: '2.74.0'
 
+# - task: JfrogCliV2@1
+#   inputs:
+#     jfrogPlatformConnection: 'Jfrog Platform connexion'
+#     command: 'jf dotnet-config --repo-resolve=jordanta-nuget-remote'
 
-- task: JfrogCliV2@1
-  inputs:
-    jfrogPlatformConnection: 'Jfrog Platform connexion'
-    command: 'jf dotnet restore /src/Test/Test.csproj'
+# - task: JfrogCliV2@1
+#   inputs:
+#     jfrogPlatformConnection: 'Jfrog Platform connexion'
+#     command: 'jf dotnet restore /src/Test/Test.csproj'
