@@ -26,5 +26,5 @@ steps:
     cliVersion: '2.74.0'
     command: |
       jf rt ping
-      jf dotnet-config --repo-resolve=jordanta-nuget-remote --repo-deploy=jordanta-nuget-local
+      jf dotnet-config --repo-resolve=jordanta-nuget-remote
       jf dotnet restore /src/Test/Test.csproj
