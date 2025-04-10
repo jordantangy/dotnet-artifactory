@@ -18,7 +18,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: JFrogToolsInstaller@1
+
+- task: JFrogDotnetCore@1
   inputs:
+    command: 'restore'
     artifactoryConnection: 'jordanta-rt'
-    cliInstallationRepo: 'jordanta-npm-remote'
+    targetResolveRepo: 'jordanta-nuget-remote'
+    rootPath: '**/*.sln'
