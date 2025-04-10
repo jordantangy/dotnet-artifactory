@@ -23,16 +23,9 @@ steps:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
     useCustomVersion: true
     cliVersion: '2.74.0'
-    command: 'jf rt ping'
+    command: | 
+      'jf rt ping'
+      'jf dotnet-config --repo-resolve=jordanta-nuget-remote'
+      'jf dotnet restore /src/Test/Test.csproj'
 
-- task: JfrogCliV2@1
-  inputs:
-    jfrogPlatformConnection: 'Jfrog Platform connexion'
-    cliVersion: '2.74.0'
-    command: 'jf dotnet-config --repo-resolve=jordanta-nuget-remote'
 
-- task: JfrogCliV2@1
-  inputs:
-    jfrogPlatformConnection: 'Jfrog Platform connexion'
-    cliVersion: '2.74.0'
-    command: 'jf dotnet restore /src/Test/Test.csproj'
