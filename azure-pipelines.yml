@@ -28,9 +28,11 @@ steps:
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
+    cliVersion: '2.74.0'
     command: 'jf dotnet-config --repo-resolve=jordanta-nuget-remote'
 
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
+    cliVersion: '2.74.0'
     command: 'jf dotnet restore /src/Test/Test.csproj'
