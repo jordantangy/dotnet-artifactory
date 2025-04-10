@@ -18,10 +18,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
-- task: JFrogDotnetCore@1
+- task: JfrogCliV2@1
   inputs:
-    command: 'restore'
-    artifactoryConnection: 'jordanta-rt'
-    targetResolveRepo: 'jordanta-nuget-remote'
-    rootPath: '**/*.sln'
+    jfrogPlatformConnection: 'Jfrog Platform connexion'
+    command: 'jf dotnet restore src/Test/Test.csproj'
