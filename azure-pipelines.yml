@@ -22,4 +22,10 @@ steps:
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
-    command: 'jf rt ping'
+    command: 'jf dotnet-config --repo-resolve=jordanta-nuget-remote --repo-deploy=jordanta-nuget-local'
+
+
+- task: JfrogCliV2@1
+  inputs:
+    jfrogPlatformConnection: 'Jfrog Platform connexion'
+    command: 'jf dotnet restore /src/Test/Test.csproj'
