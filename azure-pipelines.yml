@@ -28,3 +28,6 @@ steps:
       jf rt ping
       jf dotnet-config --repo-resolve=jordanta-nuget-remote
       jf dotnet restore '/Users/jordanta/Desktop/Tests/dotnet-artifactory/src/Test'
+
+- script: cat '/Users/jordanta/Desktop/Tests/dotnet-artifactory/src/Test/Test.csproj'
+  displayName: 'Show contents of myfile.txt'
