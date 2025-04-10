@@ -21,6 +21,8 @@ steps:
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'Jfrog Platform connexion'
+    useCustomVersion: true
+    cliVersion: '2.74.0'
     command: 'jf rt ping'
 
 # - task: JfrogCliV2@1
