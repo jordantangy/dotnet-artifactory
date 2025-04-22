@@ -21,10 +21,10 @@ steps:
 
 - task: JfrogCliV2@1
   inputs:
-    jfrogPlatformConnection: 'JF test'
+    jfrogPlatformConnection: 'JFrog Platform connexion'
     useCustomVersion: true
     cliVersion: '2.74.0'
     command: |
       jf rt ping
       jf dotnet-config --repo-resolve=jordanta-nuget-remote
-      jf dotnet restore '/Users/jordanta/Desktop/Tests/dotnet-artifactory/src/Test' --use-lock-file --locked-mode
+      jf dotnet restore '/Users/jordanta/Desktop/Tests/dotnet-artifactory/src/Test' --verbosity detailed --use-lock-file --locked-mode
